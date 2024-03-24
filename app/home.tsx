@@ -39,9 +39,9 @@ const Home = () => {
   };
 
   const onPresWhatsApp = () => {
-    Linking.openURL(data?.whatsapp ?? "");
+  data?.whatsapp &&  Linking.openURL(data?.whatsapp ?? "");
   }; //
-  const onPressTelegram = () => Linking.openURL(data?.telegram ?? "");
+  const onPressTelegram = () => data?.telegram  && Linking.openURL(data?.telegram ?? "");
 
   return (
     <View style={styles.container}>
